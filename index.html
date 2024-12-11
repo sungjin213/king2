@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>123</title>
+    <link
+      href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP와 플러그인 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+  </head>
+  <body>
+    <!-- 로딩 페이지 -->
+    <div id="loading-page">
+      <div class="spinner"></div>
+      <div class="loading-div">
+        <p class="loading-p">로딩 중</p>
+        <p class="loading-p">조금만 기다려 주세요.</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <!-- 실제 콘텐츠 -->
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="asset/img/Logo.png" draggable="false" alt="pageLogo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li class="underLine">
+            <a href="#" target="_blank">menu</a>
+          </li>
+          <li class="underLine">
+            <a href="#" target="_blank">menu</a>
+          </li>
+          <li class="underLine">
+            <a href="#">menu</a>
+          </li>
+          <li class="underLine">
+            <a href="#">menu</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 메인 섹션 -->
+    <main id="parallax__cont">
+      <section id="section1" class="parallax__item"></section>
+      <!-- //section1 -->
+
+      <section id="section2" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              id="text-mask-svg1"
+              class="text-mask-svg1"
+              viewBox="0 0 800 650"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask1">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element1"
+                    class="toggle-text"
+                  >
+                    Q
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask1)"
+              >
+                <video
+                  class="video"
+                  id="video-element1"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="asset/video/novelbright.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              corrupti molestias earum eum corporis quaerat tempora maiores,
+              quidem recusandae libero nostrum. Eum deleniti minima ullam rerum
+              optio aspernatur provident distinctio? <br />
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가된 iframe과 배경 -->
+        <div class="video_bg" id="videoBg1">
+          <iframe
+            id="youtubePlayer1"
+            class="video-iframe iframe"
+            src="https://www.youtube.com/embed/obW4xWXKZjw?enablejsapi=1&mute=1&autoplay=1&controls=0&cc_load_policy=0&cc_lang_pref=x&fs=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //section2 -->
+
+      <section id="section3" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              viewBox="0 0 800 650"
+              class="text-mask-svg2"
+              id="text-mask-svg2"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask2">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element2"
+                  >
+                    U
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask2)"
+              >
+                <video
+                  class="video"
+                  id="video-element2"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="asset/video/orange.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- 오른쪽 섹션 -->
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
+              voluptatum veniam veritatis quia maiores repellendus
+              necessitatibus facere beatae odit quod at, unde illum, aliquam
+              culpa? Dignissimos voluptatum cumque fugiat cupiditate! <br />
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가적인 콘텐츠, 클릭 동영상 -->
+        <div class="video_bg" id="videoBg2">
+          <iframe
+            id="youtubePlayer2"
+            class="video-iframe iframe"
+            src="https://www.youtube.com/embed/ENaeyFPC3hA?enablejsapi=1&mute=1&autoplay=1&controls=0&cc_load_policy=0&cc_lang_pref=x&fs=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- //section3 -->
+
+      <section id="section4" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              viewBox="0 0 800 650"
+              class="text-mask-svg3"
+              id="text-mask-svg3"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask3">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element3"
+                  >
+                    O
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask3)"
+              >
+                <video id="video-element3" autoplay loop muted playsinline>
+                  <source src="asset/video/fragrance.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- 오른쪽 섹션 -->
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
+              voluptatum veniam veritatis quia maiores repellendus
+              necessitatibus facere beatae odit quod at, unde illum, aliquam
+              culpa? Dignissimos voluptatum cumque fugiat cupiditate! <br />
+              <span class="mute" id="muteButton3">음소거</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가적인 콘텐츠, 클릭 동영상 -->
+        <div class="video_bg" id="videoBg3">
+          <iframe
+            id="youtubePlayer3"
+            class="video-iframe hidden"
+            src="https://www.youtube.com/embed/obW4xWXKZjw?mute=1&autoplay=1&controls=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //section4 -->
+
+      <section id="section5" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              viewBox="0 0 800 650"
+              class="text-mask-svg4"
+              id="text-mask-svg4"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask4">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element4"
+                  >
+                    K
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask4)"
+              >
+                <video id="video-element4" autoplay loop muted playsinline>
+                  <source src="asset/video/mela.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- 오른쪽 섹션 -->
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
+              voluptatum veniam veritatis quia maiores repellendus
+              necessitatibus facere beatae odit quod at, unde illum, aliquam
+              culpa? Dignissimos voluptatum cumque fugiat cupiditate! <br />
+              <span class="mute" id="muteButton4">음소거</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가적인 콘텐츠, 클릭 동영상 -->
+        <div class="video_bg" id="videoBg4">
+          <iframe
+            id="youtubePlayer4"
+            class="video-iframe hidden"
+            src="https://www.youtube.com/embed/obW4xWXKZjw?mute=1&autoplay=1&controls=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //section5 -->
+
+      <section id="section6" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              viewBox="0 0 800 650"
+              class="text-mask-svg5"
+              id="text-mask-svg5"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask5">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element5"
+                  >
+                    K
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask5)"
+              >
+                <video id="video-element5" autoplay loop muted playsinline>
+                  <source src="asset/video/neko.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- 오른쪽 섹션 -->
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
+              voluptatum veniam veritatis quia maiores repellendus
+              necessitatibus facere beatae odit quod at, unde illum, aliquam
+              culpa? Dignissimos voluptatum cumque fugiat cupiditate! <br />
+              <span class="mute" id="muteButton5">음소거</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가적인 콘텐츠, 클릭 동영상 -->
+        <div class="video_bg" id="videoBg5">
+          <iframe
+            id="youtubePlayer5"
+            class="video-iframe hidden"
+            src="https://www.youtube.com/embed/obW4xWXKZjw?mute=1&autoplay=1&controls=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //section6 -->
+
+      <section id="section7" class="parallax__item">
+        <div class="split-container">
+          <!-- 왼쪽 섹션 -->
+          <div class="left-section">
+            <svg
+              viewBox="0 0 800 650"
+              class="text-mask-svg6"
+              id="text-mask-svg6"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <clipPath id="text-mask6">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dy=".35em"
+                    text-anchor="middle"
+                    id="text-element6"
+                  >
+                    A
+                  </text>
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clip-path="url(#text-mask6)"
+              >
+                <video id="video-element6" autoplay loop muted playsinline>
+                  <source src="asset/video/refrain.mp4" type="video/mp4" />
+                </video>
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- 오른쪽 섹션 -->
+          <div class="right-section">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
+              voluptatum veniam veritatis quia maiores repellendus
+              necessitatibus facere beatae odit quod at, unde illum, aliquam
+              culpa? Dignissimos voluptatum cumque fugiat cupiditate! <br />
+              <span class="mute" id="muteButton6">음소거</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 추가적인 콘텐츠, 클릭 동영상 -->
+        <div class="video_bg" id="videoBg6">
+          <iframe
+            id="youtubePlayer6"
+            class="video-iframe hidden"
+            src="https://www.youtube.com/embed/obW4xWXKZjw?mute=1&autoplay=1&controls=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- //section7 -->
+
+      <section id="section8" class="parallax__item">
+        <div>
+          <p class="thx"></p>
+          <div class="lastBtn">
+            <a href="index.html" class="button">처음으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <script src="js/youtube.js"></script> -->
+    <!-- <script src="js/slide.js"></script>
+    <script src="js/section.js"></script>
+    <script src="js/multiple-text.js"></script> -->
+
+    <!-- <script src="js/btnSetting.js"></script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadingPage = document.getElementById("loading-page");
+
+        // 로딩 상태에서 x축 스크롤 잠금
+        document.body.classList.add("loading");
+
+        // 로딩이 끝난 후 처리
+        setTimeout(() => {
+          // 로딩 페이지 숨기기
+          loadingPage.style.display = "none";
+
+          // x축 스크롤 복구
+          document.body.classList.remove("loading");
+        }, 3000); // 3초 후 로딩 종료
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const masks = document.querySelectorAll("[id^='text-mask-svg']");
+
+        masks.forEach((mask, index) => {
+          const sectionNumber = index + 1;
+          const iframe = document.querySelector(
+            `#youtubePlayer${sectionNumber}`
+          );
+          const textElement = mask.querySelector("text"); // 텍스트 요소 선택
+
+          if (iframe && textElement) {
+            textElement.style.pointerEvents = "auto";
+            textElement.style.cursor = "pointer";
+
+            textElement.addEventListener("click", function () {
+              iframe.classList.toggle("hidden"); // 표시/숨김 토글
+            });
+          }
+        });
+      });
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
